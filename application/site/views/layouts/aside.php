@@ -43,7 +43,7 @@ SiteAsset::register($this);
             <div id="top_nav" class="ddsmoothmenu">
                 <ul>
                     <li><a href="index.html" class="selected">Home</a></li>
-                    <li><a href="products.html">Products</a>
+                    <li><a href=<?= \yii\helpers\Url::to(['catalog/products'])?>>Products</a>
                         <ul>
                             <li><a href="#submenu1">Sub menu 1</a></li>
                             <li><a href="#submenu2">Sub menu 2</a></li>
