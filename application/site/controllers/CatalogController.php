@@ -18,4 +18,11 @@ class CatalogController extends \app\base\Controller {
 
         return $this->render('/products',['products'=>$products]);
     }
+    
+    public function actionProduct($id)
+    {
+        $product = Product::findOne($id);
+
+        return $this->render('/product',['product' => $product]);
+    }
 }
