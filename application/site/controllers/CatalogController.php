@@ -12,4 +12,10 @@ class CatalogController extends \app\base\Controller {
         
         return $this->render('/category',['products' => $products]);
     }
+    public function  actionProducts()
+    {
+        $products=Product::find()->orderBy(['updatedAt'=>SORT_DESC])->limit(12)->all();
+
+        return $this->render('/products',['products'=>$products]);
+    }
 }
