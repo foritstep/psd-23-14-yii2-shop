@@ -4,10 +4,8 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use site\assets\SiteAsset;
+use yii\helpers\Url;
 
 SiteAsset::register($this);
 ?>
@@ -30,7 +28,17 @@ SiteAsset::register($this);
             <div id="site_title"><h1><a href="#">Online Shoes Store</a></h1></div>
             <div id="header_right">
                 <p>
-                    <a href="#">My Account</a> | <a href="#">My Wishlist</a> | <a href="#">My Cart</a> | <a href="#">Checkout</a> | <a href="#">Log In</a></p>
+                    <a href="#">My Wishlist</a> | <a href="#">My Cart</a> | <a href="#">Checkout</a> |
+
+                    <?php if (\Yii::$app->user->isGuest) { ?>
+                        <a href="<?= Url::to(['user/login']) ?>">Log In</a> |
+                        <a href="<?= Url::to(['user/registration']) ?>">Registration</a></p>
+                    <?php } else { ?>
+                        <a href="#">My Account (<?= \Yii::$app->user->identity->login ?>)</a>
+                        <a href="<?= Url::to(['user/logout']) ?>">Выход</a>
+
+                    <?php } ?>
+
                 <p>
                     Shopping Cart: <strong>3 items</strong> ( <a href="shoppingcart.html">Show Cart</a> )
                 </p>
