@@ -1,0 +1,45 @@
+$cart = [
+	'15' => 5,
+	'12' => 2,
+	'23' => 10
+];
+
+echo $cart[15];
+
+$cart = \Yii::$app->session->get('cart', []);
+
+$productId = $_GET['id'];
+$quantity = $_GET['quentity'] или 1
+
+if (isset($cart[$productId])) {
+	$cart[$productId] += $quantity;
+} else {
+	$cart[$productId] = $quantity;
+}
+
+\Yii::$app->set('cart', $cart);
+
+class CartController extends \yii\web\Controller {
+	public function actionIndex() {
+		return $this->render('cart', ['cart' => ......]);
+	}
+	
+	
+	// ссылка на это действие Url::to(['cart/add', 'productId' => ....])
+	public function actionAdd($productId, $quantity = 1) {   
+		// добавление в корзину
+		
+		return $this->goBack();
+	}
+	
+	public function actionSetQuantity($productId, $quantity) {
+		// установить товару новое количество в корзине
+	}
+	
+	public function actionDelete($productId) {
+		// Удаление товара из корзины
+	}
+}
+
+
+

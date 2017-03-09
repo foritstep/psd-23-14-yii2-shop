@@ -32,7 +32,7 @@ SiteAsset::register($this);
                 <p>
                     <a href="#">My Account</a> | <a href="#">My Wishlist</a> | <a href="#">My Cart</a> | <a href="#">Checkout</a> | <a href="#">Log In</a></p>
                 <p>
-                    Shopping Cart: <strong>3 items</strong> ( <a href="shoppingcart.html">Show Cart</a> )
+                    Shopping Cart: <strong><?= $this->params['cartSum'] ?> items</strong> ( <a href="<?= \yii\helpers\Url::to(['cart/index']) ?>">Show Cart</a> )
                 </p>
             </div>
             <div class="cleaner"></div>
