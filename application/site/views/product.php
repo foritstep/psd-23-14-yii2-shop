@@ -29,6 +29,7 @@
         <div class="cleaner h20"></div>
 
         <a href="shoppingcart.html" class="addtocart"></a>
+        <a href="<?= \yii\helpers\Url::to(['whishlist/add', 'id' => $product->id]) ?>">Добавить в список желаний</a>
 
     </div>
     <div class="cleaner h30"></div>

@@ -30,7 +30,7 @@ SiteAsset::register($this);
             <div id="site_title"><h1><a href="#">Online Shoes Store</a></h1></div>
             <div id="header_right">
                 <p>
-                    <a href="#">My Account</a> | <a href="#">My Wishlist</a> | <a href="#">My Cart</a> | <a href="#">Checkout</a> | <a href="#">Log In</a></p>
+                    <a href="#">My Account</a> | <a href="<?= \yii\helpers\Url::to(['whishlist/index'])?>">My Whishlist</a> | <a href="#">My Cart</a> | <a href="#">Checkout</a> | <a href="#">Log In</a></p>
                 <p>
                     Shopping Cart: <strong>3 items</strong> ( <a href="shoppingcart.html">Show Cart</a> )
                 </p>
