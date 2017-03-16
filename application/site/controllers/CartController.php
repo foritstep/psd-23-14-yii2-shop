@@ -11,7 +11,8 @@ class CartController extends \app\base\Controller {
         $products =Product::find()->where(['id' =>array_keys($this->cart)])->all();
         return $this->render('/shoppingcart',[
             'quantities' => $this->cart,
-            'products' => $products]
+            'products' => $products,
+            'totalprice' => 0]
         );
     }
     public function init()
@@ -36,5 +37,8 @@ class CartController extends \app\base\Controller {
             $this->cart[$productId]=$quantity;
         }
         return $this->goBack();
+    }
+    public function actionDelete($productId) {
+        
     }
 }
