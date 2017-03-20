@@ -1,4 +1,5 @@
 <h1>Shopping Cart</h1>
+<?php use \yii\helpers\Url; ?>
 <table width="680px" cellspacing="0" cellpadding="5">
     <tr bgcolor="#ddd">
         <th width="220" align="left">Image </th>
@@ -16,7 +17,7 @@
                 <td align="center"><input type="text" value="<?= $quantities[$product->id] ?>" style="width: 20px; text-align: right" /> </td>
                 <td align="right"><p class="product_price"><?= $product->price ?></p> </td>
                 <td align="right"><p class="product_price"><?= $product->price*$quantities[$product->id] ?></p> </td>
-                <td align="center"> <a href="#"><img src="images/remove_x.gif" alt="remove" /><br />Remove</a> </td>
+                <td align="center"> <a href="<?= Url::to(['cart/delete','productId' => $product->id]) ?>"><img src="images/remove_x.gif" alt="remove" /><br />Remove</a> </td>
                 <? $totalprice += $product->price*$quantities[$product->id] ?>
             </tr>
     <?php } ?>

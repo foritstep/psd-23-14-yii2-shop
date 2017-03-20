@@ -39,6 +39,10 @@ class CartController extends \app\base\Controller {
         return $this->goBack();
     }
     public function actionDelete($productId) {
-        
+        if(isset($this->cart[$productId]))
+        {
+            unset($this->cart[$productId]);
+        }
+        return $this->redirect(['index']);
     }
 }
