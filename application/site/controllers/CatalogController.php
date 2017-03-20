@@ -16,8 +16,16 @@ class CatalogController extends \app\base\Controller {
     public function  actionProducts()
     {
         $products = Product::find()->orderBy(['updatedAt' => SORT_DESC])->limit(12)->all();
+        //$products = Product::find()->orderBy(['updatedAt' => SORT_DESC])->limit(12)->where(['LIKE', 'name', $search_text])->all();
 
         return $this->render('/products', ['products' => $products]);
+    }
+
+    public function actionSearch($search_text)
+    {
+        $products = Product::find()->orderBy(['updatedAt' => SORT_DESC])->limit(12)->where(['LIKE', 'name', $search_text])->all();
+
+        return $this->render('/search', ['products' => $products, 'search_text' => $search_text]);
     }
 
     public function actionProduct($id)

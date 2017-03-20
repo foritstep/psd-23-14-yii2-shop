@@ -74,9 +74,10 @@ SiteAsset::register($this);
                 <br style="clear: left" />
             </div> <!-- end of ddsmoothmenu -->
             <div id="templatemo_search">
-                <form action="#" method="get">
-                    <input type="text" value=" " name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
-                    <input type="submit" name="Search" value=" " alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
+                <form action="<?= Url::to(['catalog/search']) ?>" method="get">
+                    <input type="hidden" name="r" value="site/catalog/search" />
+                    <input type="text" value="" name="search_text" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+                    <input type="submit" name="" value=" " alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
                 </form>
             </div>
         </div> <!-- END of templatemo_menubar -->
