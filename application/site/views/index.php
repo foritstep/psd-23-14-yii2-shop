@@ -1,3 +1,6 @@
+<?php
+use \yii\helpers\Url;
+?>
 <div id="slider-wrapper">
     <div id="slider" class="nivoSlider">
         <img src="images/slider/02.jpg" alt="" />
@@ -19,7 +22,7 @@
         <a href="<?= \yii\helpers\Url::to(['catalog/product','id' => $product->id]) ?>"><img src="<?= $product->getImageUrl([200,200]) ?>" alt="Shoes 1" /></a>
         <p><?= $product->description ?></p>
         <p class="product_price"><?= $product->price ?></p>
-        <a href="shoppingcart.html" class="addtocart"></a>
+        <a href="<?= Url::to(['cart/add', 'productId' => $product->id]) ?>" class="addtocart"></a>
         <a href="<?= \yii\helpers\Url::to(['catalog/product','id' => $product->id]) ?>" class="detail"></a>
     </div>
 

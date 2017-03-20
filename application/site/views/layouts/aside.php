@@ -40,7 +40,7 @@ SiteAsset::register($this);
                     <?php } ?>
                 </p>
                 <p>
-                    Shopping Cart: <strong>3 items</strong> ( <a href="shoppingcart.html">Show Cart</a> )
+                    Shopping Cart: <strong><?= $this->params['cartSum'] ?> items</strong> ( <a href="<?= \yii\helpers\Url::to(['cart/index']) ?>">Show Cart</a> )
                 </p>
             </div>
             <div class="cleaner"></div>
