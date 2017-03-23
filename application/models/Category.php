@@ -4,7 +4,7 @@ namespace app\models;
 
 class Category extends \app\base\ActiveRecord {
     public static function tableName() {
-        return 'Category';
+        return 'category';
     }
 
     public function rules() {
