@@ -15,6 +15,11 @@ class UserController extends \app\base\Controller {
             $model->load(\Yii::$app->request->post());
 
             if ($model->run()) {
+                \Yii::$app->mailer->compose("testmail.php",['data'=>null])
+                    ->setTo("test@test.com")
+                    ->setFrom("siamondrewards@gmail.com")
+                    ->setSubject("Test")
+                    ->send();
                 return $this->goHome();
             }
         }
