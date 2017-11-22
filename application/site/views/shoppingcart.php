@@ -18,7 +18,7 @@
                 <td align="right"><p class="product_price"><?= $product->price ?></p> </td>
                 <td align="right"><p class="product_price"><?= $product->price*$quantities[$product->id] ?></p> </td>
                 <td align="center"> <a href="<?= Url::to(['cart/delete','productId' => $product->id]) ?>"><img src="images/remove_x.gif" alt="remove" /><br />Remove</a> </td>
-                <? $totalprice += $product->price*$quantities[$product->id] ?>
+                <?php $totalprice += $product->price*$quantities[$product->id] ?>
             </tr>
     <?php } ?>
 
