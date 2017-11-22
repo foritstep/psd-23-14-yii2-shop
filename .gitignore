@@ -1,3 +1,7 @@
+# vscode project folder
+.vscode
+launch.json
+
 # phpstorm project files
 .idea
 
