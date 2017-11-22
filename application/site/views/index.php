@@ -22,7 +22,7 @@ use \yii\helpers\Url;
         <a href="<?= \yii\helpers\Url::to(['catalog/product','id' => $product->id]) ?>"><img src="<?= $product->getImageUrl([200,200]) ?>" alt="Shoes 1" /></a>
         <p><?= $product->description ?></p>
         <p class="product_price"><?= $product->price ?></p>
-        <a href="<?= Url::to(['cart/add', 'productId' => $product->id]) ?>" class="addtocart"></a>
+        <a href="<?= \yii\helpers\Url::to(['cart/add', 'productId' => $product->id]) ?>" class="addtocart"></a>
         <a href="<?= \yii\helpers\Url::to(['catalog/product','id' => $product->id]) ?>" class="detail"></a>
     </div>
 

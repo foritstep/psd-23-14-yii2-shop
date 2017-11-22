@@ -23,7 +23,7 @@
     <?php } ?>
 
     <tr>
-        <td colspan="3" align="right"  height="30px">Have you modified your basket? Please click here to <a href="shoppingcart.html"><strong>Update</strong></a>&nbsp;&nbsp;</td>
+        <td colspan="3" align="right"  height="30px">Have you modified your basket? Please click here to <a href="<?= \yii\helpers\Url::to(['cart/add', 'productId' => $product->id]) ?>"><strong>Update</strong></a>&nbsp;&nbsp;</td>
         <td align="right" style="background:#ddd; font-weight:bold"> Total </td>
         <td align="right" style="background:#ddd; font-weight:bold"><?= $totalprice ?> </td>
         <td style="background:#ddd; font-weight:bold"> </td>

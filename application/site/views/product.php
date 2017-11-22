@@ -28,7 +28,7 @@
         </table>
         <div class="cleaner h20"></div>
 
-        <a href="shoppingcart.html" class="addtocart"></a>
+        <a href="<?= \yii\helpers\Url::to(['cart/add', 'productId' => $product->id]) ?>" class="addtocart"></a>
         <a href="<?= \yii\helpers\Url::to(['whishlist/add', 'id' => $product->id]) ?>">Добавить в список желаний</a>
 
     </div>
@@ -44,20 +44,20 @@
         <a href="productdetail.html"><img src="images/product/01.jpg" alt="" /></a>
         <h3>Ut eu feugiat</h3>
         <p class="product_price">$ 100</p>
-        <a href="shoppingcart.html" class="addtocart"></a>
+        <a href="<?= \yii\helpers\Url::to(['cart/add', 'productId' => $product->id]) ?>" class="addtocart"></a>
         <a href="<?= \yii\helpers\Url::to(['catalog/product','id' => $product->id]) ?>" class="detail"></a>
     </div>
     <div class="product_box">
         <a href="productdetail.html"><img src="images/product/02.jpg" alt="" /></a>
         <h3>Curabitur et turpis</h3>
         <p class="product_price">$ 200</p>
-        <a href="shoppingcart.html" class="addtocart"></a>
+        <a href="<?= \yii\helpers\Url::to(['cart/add', 'productId' => $product->id]) ?>" class="addtocart"></a>
         <a href="<?= \yii\helpers\Url::to(['catalog/product','id' => $product->id]) ?>" class="detail"></a>
     </div>
     <div class="product_box no_margin_right">
         <a href="productdetail.html"><img src="images/product/03.jpg" alt="" /></a>
         <h3>Mauris consectetur</h3>
         <p class="product_price">$ 120</p>
-        <a href="shoppingcart.html" class="addtocart"></a>
+        <a href="<?= \yii\helpers\Url::to(['cart/add', 'productId' => $product->id]) ?>" class="addtocart"></a>
         <a href="<?= \yii\helpers\Url::to(['catalog/product','id' => $product->id]) ?>" class="detail"></a>
     </div>

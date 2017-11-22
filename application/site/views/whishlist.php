@@ -9,7 +9,7 @@
         <a href="productdetail.html"><img src="<?= $product->getImageUrl([200,200]) ?>" alt="Shoes 1" /></a>
         <p><?= $product->description ?></p>
         <p class="product_price"><?= $product->price ?></p>
-        <a href="shoppingcart.html" class="addtocart"></a>
+        <a href="<?= \yii\helpers\Url::to(['cart/add', 'productId' => $product->id]) ?>" class="addtocart"></a>
         <a href="productdetail.html" class="detail"></a>
         <a href="<?= \yii\helpers\Url::to(['whishlist/delete', 'id'=>$product->id])?>">    Удалить из Избранного  </a>
     </div>
