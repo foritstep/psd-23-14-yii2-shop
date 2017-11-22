@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = ['label' => 'registration'];
 
     <?= $form->field($model, 'login') ?>
 
-    <?= $form->field($model, 'password') ?>
+    <?= $form->field($model, 'password')->input('password') ?>
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
